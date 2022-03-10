@@ -2,11 +2,12 @@
     box-sizing: border-box;
 }
 
-body, html {
+body {
     background: #F1F1F1;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -47,31 +48,127 @@ body, html {
     display: flex;
 }
 
-.header {
-    position: relative;
-    padding: 91px 95px;
+.site {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-ul {
+.sidebar {
+    position: absolute;
+    align-items: center;
+    width: 180px;
+    height: 170px;
+    top: 85px;
+    left: 51px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.sidebar ul {
+    padding: 13px 0;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
     list-style: none;
 }
 
-.header a {
+.sidebar a {
     text-decoration: none;
     color: #707070;
-   
 }
 
-.header a:hover {
-    color: #000000;
+.sidebar li {
+    margin: 4px 16px;
+}
+
+.img {
+    margin: 0 25px 0 9px;
+    background-image: rgba(0, 0, 0, 0.67);
+}
+
+.sidebar a:hover {
+    color: #000;
     font-weight: bold;
 }
 
-.header li:hover {
-    width: 11rem;
-    height: 26px;
-    background: #FFFFFF;
-    border: 1px solid #BDBDBD;
-    box-sizing: border-box;
+.sidebar li:hover {
+    border: solid 1px #DBDBDB;
     border-radius: 5px;
+    background-color: #FFFFFF;
+    font-weight: 700;
 }
+
+/* 
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar a {
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    padding: 0.6em 0;
+    transition: 0.3s;
+    border: solid 1px transparent;
+    padding-left: 10px;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 9px;
+    margin-top: -2px;
+    margin-right: 20px;
+    opacity: 0.67;
+    background: url(img/home.svg) center center / contain;
+    transition: opacity 0.3s;
+}
+
+.sidebar .sidebar-messages::before {
+    background-image: url(img/mail.svg);
+}
+
+.sidebar .sidebar-events::before {
+    background-image: url(img/calendar.svg);
+}
+
+.sidebar .sidebar-groups::before {
+    background-image: url(img/groups.svg);
+}
+
+.sidebar .sidebar-friends::before {
+    background-image: url(img/groups.svg);
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar a:hover,
+.sidebar a:active {
+    color: #000000;
+    border: solid 1px #DBDBDB;
+    border-radius: 5px;
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+.sidebar a:hover::before,
+.sidebar a:active::before {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 950px) {
+    .sidebar {
+        display: block;
+        flex: none;
+        width: 180px;
+    }
+    .sidebar a {
+        width: 100%;
+    }
+} */
